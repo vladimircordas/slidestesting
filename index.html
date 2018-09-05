@@ -1,0 +1,104 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.5/jquery.pagepiling.css" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <ul id="myMenu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
+        <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
+        <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+    </ul>
+    <div id="pagepiling">
+        <div class="section" id="firstPage">
+            <h1>Some section</h1>
+            <img class="testImg" src="img/1.jpg">
+        </div>
+        <div class="section" id="secondPage">
+            <h1>Some section</h1>
+            <img class="testImg" src="img/1.jpg">
+        </div>
+        <div class="section" id="thirdPage">
+            <h1>Some section</h1>
+            <img class="testImg" src="img/1.jpg">
+        </div>
+        <div class="section" id="fourthPage">
+            <h1>Some section</h1>
+            <img class="testImg" src="img/1.jpg">
+        </div>
+    </div>
+    <!-- /container -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.5/jquery.pagepiling.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script>
+        imagesLoaded(document.body, () => document.body.classList.remove('loading'));
+
+        var spriteImages = document.querySelectorAll('.testImg');
+        var spriteImagesSrc = [];
+        var texts = [];
+
+        for (var i = 0; i < spriteImages.length; i++) {
+            var img = spriteImages[i];
+            // Set the texts you want to display to each slide 
+            // in a sibling element of your image and edit accordingly
+            if (img.nextElementSibling) {
+                texts.push(img.nextElementSibling.innerHTML);
+            } else {
+                texts.push('');
+            }
+            spriteImagesSrc.push(img.getAttribute('src'));
+        }
+        var initCanvasSlideshow = new CanvasSlideshow({
+            sprites: spriteImagesSrc,
+            displacementImage: 'img/dmaps/2048x2048/clouds.jpg',
+            autoPlay: true,
+            autoPlaySpeed: [4, 3],
+            displaceScale: [5000, 10000],
+            interactive: true,
+            interactionEvent: 'click', // 'click', 'hover', 'both' 
+            displaceAutoFit: false,
+            dispatchPointerOver: true // restarts pointerover event after click 
+        });
+    </script>
+
+</body>
+
+</html>
