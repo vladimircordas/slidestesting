@@ -38,26 +38,29 @@
         <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
         <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
     </ul>
-    <div id="pagepiling">
-        <div class="section" id="firstPage">
-            <h1>Some section</h1>
-            <img class="testImg" src="img/1.jpg">
+    <main class="site-wrapper">
+        <div id="pagepiling" style="display: none;">
+            <div class="section" id="firstPage">
+                <h1>Some section</h1>
+                <img class="testImg" src="img/1.jpg">
+            </div>
+            <div class="section" id="secondPage">
+                <h1>Some section</h1>
+                <img class="testImg" src="img/1.jpg">
+            </div>
+            <div class="section" id="thirdPage">
+                <h1>Some section</h1>
+                <img class="testImg" src="img/1.jpg">
+            </div>
+            <div class="section" id="fourthPage">
+                <h1>Some section</h1>
+                <img class="testImg" src="img/1.jpg">
+            </div>
         </div>
-        <div class="section" id="secondPage">
-            <h1>Some section</h1>
-            <img class="testImg" src="img/1.jpg">
-        </div>
-        <div class="section" id="thirdPage">
-            <h1>Some section</h1>
-            <img class="testImg" src="img/1.jpg">
-        </div>
-        <div class="section" id="fourthPage">
-            <h1>Some section</h1>
-            <img class="testImg" src="img/1.jpg">
-        </div>
-    </div>
-    <!-- /container -->
-
+        <button class="scene-nav scene-nav--prev" data-nav="previous"><svg class="icon icon--arrow-nav-prev"><use xlink:href="#icon-arrow-nav"></use></svg></button>
+        <button class="scene-nav scene-nav--next" data-nav="next"><svg class="icon icon--arrow-nav-next"><use xlink:href="#icon-arrow-nav"></use></svg></button>
+        <!-- /container -->
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
@@ -82,7 +85,7 @@
             if (img.nextElementSibling) {
                 texts.push(img.nextElementSibling.innerHTML);
             } else {
-                texts.push('');
+                texts.push('Hola Mi Amigos!');
             }
             spriteImagesSrc.push(img.getAttribute('src'));
         }
