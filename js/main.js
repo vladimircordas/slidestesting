@@ -35,11 +35,11 @@ $(document).ready(function() {
     
     $(window).bind('mousewheel', function(event) {
         if (event.originalEvent.wheelDelta >= 0) {
-            $('#next').click();
+            $('#previous').click();
         }
         else {
             console.log('Scroll down');
-            $('#previous').click();
+            $('#next').click();
         }
     });
 
