@@ -31,7 +31,18 @@ $(document).ready(function() {
         },
 		afterLoad: function(anchorLink, index){},
 		afterRender: function(){},
-	});
+    });
+    
+    $(window).bind('mousewheel', function(event) {
+        if (event.originalEvent.wheelDelta >= 0) {
+            $('#next').click();
+        }
+        else {
+            console.log('Scroll down');
+            $('#previous').click();
+        }
+    });
+
 });
 
 (function() {
