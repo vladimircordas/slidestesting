@@ -16,6 +16,9 @@ body {
 
 nav {
     z-index: 9999;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
 }
 
 .testImg {
