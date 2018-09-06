@@ -21,6 +21,13 @@ nav {
     margin: 0 auto;
 }
 
+.drop-menu {
+    z-index: 9999;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
 .testImg {
     position: absolute;
     top: 0;
