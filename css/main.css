@@ -46,7 +46,6 @@ nav {
     z-index: 9999;
     width: 320px;
     margin-left: calc(100% - 320px);
-    background-color: rgba(51, 51, 51, 0.5);
 }
 
 .testImg {
