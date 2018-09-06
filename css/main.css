@@ -16,15 +16,15 @@ body {
 
 nav {
     z-index: 9999;
-    width: 100%;
-    max-width: 1170px;
+    width: 50%;
+    max-width: 585px;
     margin: 0 auto;
 }
 
 .drop-menu {
     z-index: 9999;
-    width: 100%;
-    max-width: 1170px;
+    width: 50%;
+    max-width: 585px;
     margin: 0 auto;
 }
 
