@@ -16,9 +16,27 @@ body {
 
 nav {
     z-index: 9999;
+}
+
+.absolute-top-left,
+.absolute-top-right {
+    z-index: 9999;
     width: 50%;
     max-width: 585px;
-    margin: 0 auto;
+    position: absolute;
+    top: 0;
+}
+
+.absolute-top-left {
+    margin-left: calc(100vh - 90%);
+    left: 0;
+    right: auto;
+}
+
+.absolute-top-right {
+    margin-right: calc(100vh - 90%);
+    left: auto;
+    right: 0;
 }
 
 .drop-menu {
