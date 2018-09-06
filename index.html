@@ -59,22 +59,22 @@
     </nav>
 
     <main class="site-wrapper">
-        <div id="pagepiling" style="display: none;">
-            <div class="section" id="firstPage">
-                <h1>Some section</h1>
-                <img class="testImg" src="img/1.jpg">
+        <div class="slide-wrapper">
+            <div class="slide-item">
+                <h3 class="slide-item__title">Slide 1</h3>
+                <img src="img/1.jpg" class="slide-item__image">
             </div>
-            <div class="section" id="secondPage">
-                <h1>Some section</h1>
-                <img class="testImg" src="img/2.jpg">
+            <div class="slide-item">
+                <h3 class="slide-item__title">Slide 2</h3>
+                <img src="img/2.jpg" class="slide-item__image">
             </div>
-            <div class="section" id="thirdPage">
-                <h1>Some section</h1>
-                <img class="testImg" src="img/3.jpg">
+            <div class="slide-item">
+                <h3 class="slide-item__title">Slide 3</h3>
+                <img src="img/3.jpg" class="slide-item__image">
             </div>
-            <div class="section" id="fourthPage">
-                <h1>Some section</h1>
-                <img class="testImg" src="img/4.jpg">
+            <div class="slide-item">
+                <h3 class="slide-item__title">Slide 3</h3>
+                <img src="img/4.jpg" class="slide-item__image">
             </div>
         </div>
         <button id="previous" class="scene-nav scene-nav--prev" data-nav="previous"><svg class="icon icon--arrow-nav-prev"><use xlink:href="#icon-arrow-nav"></use></svg></button>
@@ -94,7 +94,7 @@
     <script>
         imagesLoaded(document.body, () => document.body.classList.remove('loading'));
 
-        var spriteImages = document.querySelectorAll('.testImg');
+        var spriteImages = document.querySelectorAll('.slide-item__image');
         var spriteImagesSrc = [];
         var texts = [];
 
@@ -118,6 +118,7 @@
             interactive: true,
             interactionEvent: 'click', // 'click', 'hover', 'both' 
             displaceAutoFit: false,
+            moveWhenInside: true,
             dispatchPointerOver: true // restarts pointerover event after click 
         });
     </script>
