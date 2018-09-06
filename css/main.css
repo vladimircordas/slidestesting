@@ -14,6 +14,10 @@ body {
     padding-top: 100vh;
 }
 
+nav {
+    z-index: 9999;
+}
+
 .testImg {
     position: absolute;
     top: 0;
