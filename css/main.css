@@ -2,6 +2,14 @@
    Author's custom styles
    ========================================================================== */
 
+.bkg-color-solid {
+    background-color: #333333!important;
+}
+
+.bkg-color-transparent {
+    background-color: rgba(51, 51, 51, 0.5)!important;
+}
+
 html,
 body {
     padding: 0;
@@ -11,37 +19,34 @@ body {
 body {
     overflow: hidden;
     background-color: #333333;
-    padding-top: 100vh;
+    padding-top: 70px;
 }
 
 nav {
     z-index: 9999;
+    max-width: 1140px;
+    margin: 0 auto;
+    position: absolute!important;
+    top: 10px;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.5)!important;
 }
 
-.absolute-top-left,
-.absolute-top-right {
-    z-index: 9999;
-    width: 50%;
-    max-width: 585px;
-    position: absolute;
-    top: 0;
-}
-
-.absolute-top-left {
-    left: calc(100vh - 90%);
-    right: auto;
-}
-
-.absolute-top-right {
-    right: calc(100vh - 90%);
-    left: auto;
+.navbar.menu-nav {
+    padding-top: 55px;
 }
 
 .drop-menu {
     z-index: 9999;
-    width: 50%;
-    max-width: 585px;
     margin: 0 auto;
+}
+
+#mainMenu {
+    z-index: 9999;
+    width: 320px;
+    margin-left: calc(100% - 320px);
+    background-color: rgba(51, 51, 51, 0.5);
 }
 
 .testImg {
@@ -77,4 +82,5 @@ nav {
 
 canvas {
     position: absolute;
+    z-index: -1;
 }
