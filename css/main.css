@@ -28,15 +28,13 @@ nav {
 }
 
 .absolute-top-left {
-    margin-left: calc(100vh - 90%);
-    left: 0;
+    left: calc(100vh - 90%);
     right: auto;
 }
 
 .absolute-top-right {
-    margin-right: calc(100vh - 90%);
+    right: calc(100vh - 90%);
     left: auto;
-    right: 0;
 }
 
 .drop-menu {
