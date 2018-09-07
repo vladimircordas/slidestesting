@@ -1,6 +1,11 @@
 $(document).ready(function() {
 
-    
+  $('#mainMenuToggle').on('click', function() {
+    $('#mainMenu').fadeToggle(500);
+  });
+ 
+
+/*    
     $(window).bind('mousewheel', function(event) {
         if (event.originalEvent.wheelDelta >= 0) {
             $('#previous').click();
@@ -10,7 +15,7 @@ $(document).ready(function() {
             $('#next').click();
         }
     });
-
+*/
 });
 
 (function() {

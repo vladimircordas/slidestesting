@@ -7,7 +7,7 @@
 }
 
 .bkg-color-transparent {
-    background-color: rgba(51, 51, 51, 0.5)!important;
+    background-color: rgba(51, 51, 51, 0.7)!important;
 }
 
 html,
@@ -19,18 +19,16 @@ body {
 body {
     overflow: hidden;
     background-color: #333333;
-    padding-top: 70px;
 }
 
 nav {
     z-index: 9999;
     max-width: 1140px;
     margin: 0 auto;
-    position: absolute!important;
+    position: relative;
     top: 10px;
     left: 0;
     right: 0;
-    background-color: rgba(51, 51, 51, 0.5)!important;
 }
 
 .navbar.menu-nav {
@@ -44,8 +42,9 @@ nav {
 
 #mainMenu {
     z-index: 9999;
+    margin-top: 50px;
     width: 320px;
-    margin-left: calc(100% - 320px);
+    margin-left: calc(100% - 305px);
 }
 
 .testImg {
