@@ -97,7 +97,7 @@ $(document).ready(function() {
   
 
         // Enable Interactions
-        stage.interactive = true;
+        stage.interactive = false;
         
   
         // Fit renderer to the screen
