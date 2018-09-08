@@ -697,3 +697,20 @@ function onCloseHandler( event ) {
 
 
 init();
+
+
+
+
+var tl = new TimelineLite ( { paused:true } ), 
+    mySplitText = new SplitText("#about", {type:"words,chars"}), 
+    chars = mySplitText.chars; //an array of all the divs that wrap each character
+
+
+
+
+tl.staggerTo(chars, 0.2, {opacity:1, scale:1.2, y:-5, transformOrigin: "50% 50%", rotateZ: 30,  ease:Power4.easeIn}, 0.05, "+=0");
+tl.staggerTo(chars, 0.2, {opacity:1, scale:1, y:0,  ease:Power4.easeIn  }, 0.05, "+=0");
+
+document.getElementById("mainMenuToggle").onmouseenter = function() {
+  tl.restart();
+}
