@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   $('#mainMenuToggle').on('click', function() {
-    $('#mainMenu').fadeToggle(500);
+    $('#mainMenu').fadeToggle(300).toggleClass('active');
   });
  
 
@@ -72,7 +72,7 @@ $(document).ready(function() {
         wordWrap: true,
         wordWrapWidth: 400,
         letterSpacing: 20,
-        fontSize: 14
+        fontSize: 36
       });
 
       
@@ -701,16 +701,59 @@ init();
 
 
 
-var tl = new TimelineLite ( { paused:true } ), 
-    mySplitText = new SplitText("#about", {type:"words,chars"}), 
-    chars = mySplitText.chars; //an array of all the divs that wrap each character
+// LINK ROLLOVER ANIM WITH TWEENMAX
+var rolloverItem = document.querySelectorAll(".menu-item");
+
+for (i=0; i < rolloverItem.length; i++) {
+
+  var tl = new TimelineLite ( { paused:true } ),
+
+  mySplitText = new SplitText(rolloverItem[i], {type:"words,chars"}), 
+  chars = mySplitText.chars; //an array of all the divs that wrap each character
+
+  tl.staggerTo(chars, 0.2, {opacity:1, scale:1.2, y:-5, transformOrigin: "50% 50%", rotateZ: 30,  ease:Elastic.easeIn.config(0.4, 0.95)}, 0.05, "+=0");
+  tl.staggerTo(chars, 0.2, {opacity:1, scale:1, y:0,  ease:Elastic.easeIn.config(0.4, 0.95)  }, 0.05, "+=0");
+
+  rolloverItem[i].anim = tl;
+  rolloverItem[i].addEventListener("mouseenter", function() {
+      if( !this.anim.isActive() ) {
+        this.anim.play(0);
+      }
 
 
-
-
-tl.staggerTo(chars, 0.2, {opacity:1, scale:1.2, y:-5, transformOrigin: "50% 50%", rotateZ: 30,  ease:Power4.easeIn}, 0.05, "+=0");
-tl.staggerTo(chars, 0.2, {opacity:1, scale:1, y:0,  ease:Power4.easeIn  }, 0.05, "+=0");
-
-document.getElementById("mainMenuToggle").onmouseenter = function() {
-  tl.restart();
+  });
 }
+
+
+$('.sectionTrigger').on('click', function(){
+  $('#myWorkBody').toggleClass('active');
+});
+
+/* a Pen by Diaco m.lotfollahi  : https://diacodesign.com */
+
+var box=document.querySelectorAll('.box'),indx=box.length-1,Anim ;
+
+for(var i=box.length;i--;){
+	box[i].anim = TweenLite.to(box[i],0.5,{yPercent:-100,paused:true});
+};
+
+document.addEventListener("mousewheel",Go);
+document.addEventListener("DOMMouseScroll",Go);
+
+var D = document.createElement('div');
+Draggable.create(D,{
+	trigger:".box",type:'y',minimumMovement:5,cursor:'n-resize',
+	onDrag:function(){ var X=this.getDirection("start")=='up'?1:-1;  Go(X);}
+});
+
+function Go(e){
+	var SD=isNaN(e)?e.wheelDelta||-e.detail:e;
+	if(SD<0 && indx>0 ){
+		if(!Anim||!Anim.isActive()){Anim=box[indx].anim.play();  indx--;}
+	}else if(SD>0 && indx<box.length-1){
+		if(!Anim||!Anim.isActive()){indx++;  Anim=box[indx].anim.reverse();}
+	};
+	if(isNaN(e))e.preventDefault();
+};
+
+/* a Pen by Diaco m.lotfollahi  : https://diacodesign.com */

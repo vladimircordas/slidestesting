@@ -29,7 +29,7 @@
 </head>
 
 <body class="demo-5 loading">
-    <main>
+    <header>
         <div class="container">
             <nav class="navbar navbar-dark absolute-top-left bkg-transparent">
                 <div class="container">
@@ -37,8 +37,8 @@
 
 
 
-                    <a id="mainMenuToggle">
-                        <span id="about">About</span>
+                    <a id="mainMenuToggle" class="menu-item">
+                        <span id="about" class="text-hovers">About</span>
                     </a>
                 </div>
             </nav>
@@ -51,23 +51,24 @@
 
 
 
-            <div class="collapse" id="mainMenu">
-                <div class="p-4 bkg-color-transparent">
 
-                    <h5 class="text-white h4">Collapsed content</h5>
-                    <span class="text-muted">Toggleable via the navbar brand.</span>
-                </div>
+        </div>
+        <div class="collapse" id="mainMenu">
+            <div class="p-4 bkg-color-transparent">
+
+                <h5 class="text-white h4">Collapsed content</h5>
+                <span class="text-muted">Toggleable via the navbar brand.</span>
             </div>
         </div>
-    </main>
-    <div class="site-wrapper">
+    </header>
+    <main class="site-wrapper">
         <div class="slide-wrapper">
             <div class="slide-item">
                 <h3 class="slide-item__title">Slide 1</h3>
                 <img src="img/1.jpg" class="slide-item__image">
             </div>
             <div class="slide-item">
-                <h3 class="slide-item__title">Slide 2</h3>
+                <h3 class="slide-item__title">Aesthetics</h3>
                 <img src="img/2.jpg" class="slide-item__image">
             </div>
             <div class="slide-item">
@@ -85,7 +86,7 @@
                     <defs>
                         <filter id="mud" color-interpolation-filters="sRGB">
                         <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
-                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm"/>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -9" result="cm"/>
                         <feBlend/>
                         </filter>
                     </defs>
@@ -125,7 +126,7 @@
                   <defs>
                     <filter id="mud" color-interpolation-filters="sRGB">
                       <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
-                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm"/>
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -9" result="cm"/>
                       <feBlend/>
                     </filter>
                   </defs>
@@ -159,45 +160,65 @@
                 </a>
             </div>
         </div>
-        <div id="work-detail-close" style="position: absolute;">
-            <svg version="1.1" x="0px" y="0px" width="80px" height="80px" viewBox="0 0 80 80" style="visibility: visible;">
-                    <defs>
-                    <filter id="mud" color-interpolation-filters="sRGB">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
-                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm"></feColorMatrix>
-                        <feBlend></feBlend>
-                    </filter>
-                    </defs>
-                    <g class="x-container" transform="translate(20,20)">
-                    <g class="mud-container" filter="url(#mud)" data-svg-origin="19.600000381469727 18.799999237060547" transform="matrix(0,0,0,0,19.600000381469727,18.799999237060547)" style="transform-origin: 0px 0px 0px;">
-                        <circle class="circle-path-1" fill="#FFFFFF" cx="19.6" cy="18.8" r="17.5" data-svg-origin="19.600000381469727 18.799999237060547" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px 0px;"></circle>
-                        <circle class="circle-path-2" fill="#FFFFFF" cx="19.6" cy="18.8" r="17.5" data-svg-origin="19.600000381469727 18.799999237060547" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px 0px;"></circle>
-                    </g>
-                    <g class="x-path" data-svg-origin="19.766257286071777 19.541313648223877" transform="matrix(1,0,0,1,-0.08133122795701021,0.0898635014498233)" style="transform-origin: 0px 0px 0px;">
-                        <path class="line-x-r" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.4,11.6L26.8,26c2.7,2.7,5,10-7.1,10.3c-0.5,0.1-5.7-0.1-9-2.4c-1.8-1.4-4.3-2.4-7.1-7.9s4-7.2,8.7-7.2h14.4c4.8,0,11.8-1.2,8.9-6.8c-3.2-6.1-8.9-0.4-8.9-0.4C24.3,14.1,12.4,26,12.4,26" data-svg-origin="19.61334252357483 22.75054359436035" transform="matrix(1,0,0,1,0,0)" style="stroke-dashoffset: 0; stroke-dasharray: 20.9406px, 142.536px; stroke: rgb(255, 255, 255); transform-origin: 0px 0px 0px;"></path>
-                        <path class="line-x-l" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.4,26l14.4-14.4c2.7-2.7,10-5,10.3,7.1c0.1,0.5-0.1,5.7-2.4,9c-1.4,1.8-2.4,4.3-7.9,7.1c-5.5,2.8-7.2-4-7.2-8.7V11.6c0-4.8-1.2-11.8-6.8-8.9c-6.1,3.2-0.4,8.9-0.4,8.9C14.9,14.1,26.8,26,26.8,26" data-svg-origin="23.5505428314209 18.73665428161621" transform="matrix(1,0,0,1,0,0)" style="stroke-dashoffset: 0; stroke-dasharray: 20.9675px, 142.706px; stroke: rgb(255, 255, 255); transform-origin: 0px 0px 0px;"></path>
-                    </g>
-                    <g class="xplod">
-                        <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="12.1" y1="1" x2="17.1" y2="9.5" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px, 999999px; opacity: 0;"></line>
-                        <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="3.9" y1="8" x2="12.4" y2="13" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px, 999999px; opacity: 0;"></line>
-                        <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="1" y1="18.8" x2="10.9" y2="18.8" style="stroke-dashoffset: 10.9; stroke-dasharray: 0px, 999999px; opacity: 0;"></line>
-                        <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="3.9" y1="29.7" x2="12.4" y2="24.7" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px, 999999px; opacity: 0;"></line>
-                        <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="12.1" y1="36.6" x2="17.1" y2="28.1" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px, 999999px; opacity: 0;"></line>
-                        <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="27.3" y1="36.6" x2="22.3" y2="28.1" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px, 999999px; opacity: 0;"></line>
-                        <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="35.5" y1="29.6" x2="27" y2="24.6" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px, 999999px; opacity: 0;"></line>
-                        <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="38.5" y1="18.8" x2="28.6" y2="18.8" style="stroke-dashoffset: 10.9; stroke-dasharray: 0px, 999999px; opacity: 0;"></line>
-                        <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="35.5" y1="7.9" x2="27" y2="12.9" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px, 999999px; opacity: 0;"></line>
-                        <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="27.3" y1="1" x2="22.3" y2="9.5" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px, 999999px; opacity: 0;"></line>
-                    </g>
-                    </g>
-                </svg>
-            <a href="#Close" title="Close">
-                <div class="hit-area"></div>
-            </a>
-        </div>
-        <!-- /container -->
 
-    </div>
+        <!-- /container -->
+        <a href="#section-1" class="section-trigger-container menu-item sectionTrigger">
+            <div class="text-hovers">Section 1</div>
+        </a>
+        <div id="myWorkBody">
+            <div id="work-detail-close" class="sectionTrigger" style="position: absolute;">
+                <svg version="1.1" x="0px" y="0px" width="80px" height="80px" viewBox="0 0 80 80" style="visibility: visible;">
+                                <defs>
+                                <filter id="mud" color-interpolation-filters="sRGB">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
+                                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -9" result="cm"></feColorMatrix>
+                                    <feBlend></feBlend>
+                                </filter>
+                                </defs>
+                                <g class="x-container" transform="translate(20,20)">
+                                <g class="mud-container" filter="url(#mud)" data-svg-origin="19.600000381469727 18.799999237060547" transform="matrix(0,0,0,0,19.600000381469727,18.799999237060547)" style="transform-origin: 0px 0px 0px;">
+                                    <circle class="circle-path-1" fill="#FFFFFF" cx="19.6" cy="18.8" r="17.5" data-svg-origin="19.600000381469727 18.799999237060547" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px 0px;"></circle>
+                                    <circle class="circle-path-2" fill="#FFFFFF" cx="19.6" cy="18.8" r="17.5" data-svg-origin="19.600000381469727 18.799999237060547" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px 0px;"></circle>
+                                </g>
+                                <g class="x-path" data-svg-origin="19.766257286071777 19.541313648223877" transform="matrix(1,0,0,1,-0.08133122795701021,0.0898635014498233)" style="transform-origin: 0px 0px 0px;">
+                                    <path class="line-x-r" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.4,11.6L26.8,26c2.7,2.7,5,10-7.1,10.3c-0.5,0.1-5.7-0.1-9-2.4c-1.8-1.4-4.3-2.4-7.1-7.9s4-7.2,8.7-7.2h14.4c4.8,0,11.8-1.2,8.9-6.8c-3.2-6.1-8.9-0.4-8.9-0.4C24.3,14.1,12.4,26,12.4,26" data-svg-origin="19.61334252357483 22.75054359436035" transform="matrix(1,0,0,1,0,0)" style="stroke-dashoffset: 0; stroke-dasharray: 20.9406px, 142.536px; stroke: rgb(255, 255, 255); transform-origin: 0px 0px 0px;"></path>
+                                    <path class="line-x-l" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.4,26l14.4-14.4c2.7-2.7,10-5,10.3,7.1c0.1,0.5-0.1,5.7-2.4,9c-1.4,1.8-2.4,4.3-7.9,7.1c-5.5,2.8-7.2-4-7.2-8.7V11.6c0-4.8-1.2-11.8-6.8-8.9c-6.1,3.2-0.4,8.9-0.4,8.9C14.9,14.1,26.8,26,26.8,26" data-svg-origin="23.5505428314209 18.73665428161621" transform="matrix(1,0,0,1,0,0)" style="stroke-dashoffset: 0; stroke-dasharray: 20.9675px, 142.706px; stroke: rgb(255, 255, 255); transform-origin: 0px 0px 0px;"></path>
+                                </g>
+                                <g class="xplod">
+                                    <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="12.1" y1="1" x2="17.1" y2="9.5" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px,
+                                    999999px; opacity: 0;"></line>
+                                    <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="3.9" y1="8" x2="12.4" y2="13" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px,
+                                    999999px; opacity: 0;"></line>
+                                    <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="1" y1="18.8" x2="10.9" y2="18.8" style="stroke-dashoffset: 10.9; stroke-dasharray: 0px,
+                                    999999px; opacity: 0;"></line>
+                                    <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="3.9" y1="29.7" x2="12.4" y2="24.7" style="stroke-dashoffset: 10.8616; stroke-dasharray:
+                                    0px, 999999px; opacity: 0;"></line>
+                                    <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="12.1" y1="36.6" x2="17.1" y2="28.1" style="stroke-dashoffset: 10.8616; stroke-dasharray:
+                                    0px, 999999px; opacity: 0;"></line>
+                                    <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="27.3" y1="36.6" x2="22.3" y2="28.1" style="stroke-dashoffset: 10.8616; stroke-dasharray:
+                                    0px, 999999px; opacity: 0;"></line>
+                                    <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="35.5" y1="29.6" x2="27" y2="24.6" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px,
+                                    999999px; opacity: 0;"></line>
+                                    <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="38.5" y1="18.8" x2="28.6" y2="18.8" style="stroke-dashoffset: 10.9; stroke-dasharray: 0px,
+                                    999999px; opacity: 0;"></line>
+                                    <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="35.5" y1="7.9" x2="27" y2="12.9" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px,
+                                    999999px; opacity: 0;"></line>
+                                    <line fill="none" stroke-dasharray="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="27.3" y1="1" x2="22.3" y2="9.5" style="stroke-dashoffset: 10.8616; stroke-dasharray: 0px,
+                                    999999px; opacity: 0;"></line>
+                                </g>
+                                </g>
+                            </svg>
+                <a href="#Close" title="Close">
+                    <div class="hit-area"></div>
+                </a>
+            </div>
+            <div class="box">END</div>
+            <div class="box">Slide 4</div>
+            <div class="box">Slide 3</div>
+            <div class="box">Slide 2</div>
+            <div class="box">Slide 1</div>
+        </div>
+    </main>
 
 
 
